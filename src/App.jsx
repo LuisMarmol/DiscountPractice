@@ -5,9 +5,13 @@ import { useState } from 'react';
 function App() { 
   const [discount, setDiscount] = useState(100);
 
-  function handleDiscount() {
+  /* function setDiscount() {
     setDiscount(75);
-  }
+  }; */
+
+  const applyDiscount = () => {
+    discountClick(75);
+  };
 
   return (
     <>
@@ -17,7 +21,7 @@ function App() {
 
       <div>
             <p data-testid="price">${discount}</p>
-            <button onClick={handleDiscount}>Apply Discount</button>
+            <button onClick={applyDiscount}>Apply Discount</button>
         </div>
     </>
   )
